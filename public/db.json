@@ -1,0 +1,38 @@
+[
+  {
+    "brandId": "adidas123",
+    "brand": "Adidas",
+    "brandImage": "https://i.ibb.co/8BSdKks/888017.jpg",
+    "upcoming": "https://i.ibb.co/qx7qnft/Adidas-Superstar-Sneakers.jpg"
+  },
+  {
+    "brandId": "nike456",
+    "brand": "Nike",
+    "brandImage": "https://i.ibb.co/9cP6p0D/5362a828-0f5b-4d17-a6c5-d0677dc89baa-1000x1000.png",
+    "upcoming": "https://i.ibb.co/0BSNt74/jordan-5-retro-university-blue-DV1310-401.jpg"
+  },
+  {
+    "brandId": "Puma789",
+    "brand": "Puma",
+    "brandImage": "https://i.ibb.co/PcQgSNS/PUMA-Logo-2003.png",
+    "upcoming": "https://i.ibb.co/wgJPRQj/81zx-Cvmnqx-L-AC-UY1100.jpg"
+  },
+  {
+    "brandId": "levis101",
+    "brand": "Levis",
+    "brandImage": "https://i.ibb.co/G0Hy7R9/batwing-dribbble.png",
+    "upcoming": "https://i.ibb.co/XJF0Pks/download.jpg"
+  },
+  {
+    "brandId": "Zara202",
+    "brand": "Zara",
+    "brandImage": "https://i.ibb.co/Prvz3qc/zara-brand-symbol-white-logo-clothes-design-icon-abstract-illustration-with-black-background-free-ve.jpg",
+    "upcoming": "https://i.ibb.co/QYRvZVB/4087480055-6-1-1.jpg"
+  },
+  {
+    "brandId": "hm303",
+    "brand": "H&M",
+    "brandImage": "https://i.ibb.co/FW7qZmg/HM-Share-Image.jpgs",
+    "upcoming": "https://i.ibb.co/5YLMz51/hmgoepprod.jpg"
+  }
+]
