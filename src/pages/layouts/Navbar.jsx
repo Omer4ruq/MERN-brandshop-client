@@ -35,7 +35,7 @@ const Navbar = () => {
             <h2 className="hidden md:block">My Cart</h2>
           </div>
         </NavLink>
-        <NavLink className="hover:underline underline-offset-8" to="/contactus">
+        <NavLink className="hover:underline underline-offset-8" to="/contact">
           <div className="flex gap-2">
             <FaPhone className="mt-1"></FaPhone>
             <h2 className="hidden md:block">Contact</h2>

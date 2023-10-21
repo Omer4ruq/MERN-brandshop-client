@@ -19,6 +19,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import Brands from "./pages/layouts/Brands.jsx";
 import PreOrders from "./pages/PreOrders.jsx";
 import Collection from "./pages/Collection.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -118,6 +119,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Collection></Collection>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/contact",
+        element: (
+          <PrivateRoutes>
+            <Contact></Contact>
           </PrivateRoutes>
         ),
       },

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Partner = () => {
   return (
@@ -18,7 +19,9 @@ const Partner = () => {
               We believe in the power of collaboration and are excited to offer
               partnership opportunities that can benefit both parties.
             </p>
-            <button className="btn btn-neutral">Explore</button>
+            <NavLink to="/contact">
+              <button className="btn btn-neutral">Explore</button>
+            </NavLink>
           </div>
         </div>
       </div>
