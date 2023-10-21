@@ -12,6 +12,6 @@ This is a brand shop website based on men fashion.. here are some key feature in
 
 - Login and Registration system. there are some private protected that can not be visited without login.
 
-here is the Live link of the project in below:
+here is the Live link of the project given below:
 
 - [My Website Here](https://fashion-client-project10.web.app/)
