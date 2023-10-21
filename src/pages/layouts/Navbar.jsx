@@ -23,7 +23,7 @@ const Navbar = () => {
           <h2>Add Products</h2>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/cart">
-          <h2>Cart</h2>
+          <h2>My Cart</h2>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/contactus">
           <h2>Contact US</h2>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a>Settings</a>
+                <NavLink to="/cart">My Cart</NavLink>
               </li>
               <li>
                 <a onClick={handleSignOut}>Logout</a>

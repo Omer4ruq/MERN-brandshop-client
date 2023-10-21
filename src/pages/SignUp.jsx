@@ -14,6 +14,7 @@ import { FaGoogle } from "react-icons/fa";
 // import app from "../../firebase/firebase.config";
 import { AuthContext } from "../providers/AuthProvider";
 import app from "../firebase/firebase.config";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -27,6 +28,13 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "User Created Succesfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.log(error.message);
@@ -42,15 +50,27 @@ const SignUp = () => {
     const photo = form.get("photo");
     if (password.length < 6) {
       setRegisterError("Pasword should be at least 6 characters or longer");
-      // toast(registerError);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Pasword should be at least 6 characters or longer",
+      });
       return;
     } else if (!/[A_Z]/.test(password)) {
       setRegisterError("Password Must have An Upper Case Character");
-      // toast(registerError);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password Must have An Upper Case Character",
+      });
       return;
     } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
       setRegisterError("Password Must have atleast one spacial Character");
-      // toast(registerError);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password Must have atleast one spacial Character",
+      });
       return;
     }
     setRegisterError("");
@@ -65,12 +85,23 @@ const SignUp = () => {
           photoURL: photo,
         });
         setSuccess("User Created Succesfully");
-        // toast.dark(success);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "User Created Succesfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.error(error);
         setRegisterError(error.message);
         // toast.error(registerError);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: setRegisterError,
+        });
       });
 
     console.log(email, password);

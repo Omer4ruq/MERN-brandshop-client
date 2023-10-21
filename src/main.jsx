@@ -17,6 +17,7 @@ import UpdateProduct from "./pages/UpdateProduct.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 
 import Brands from "./pages/layouts/Brands.jsx";
+import PreOrders from "./pages/PreOrders.jsx";
 
 const router = createBrowserRouter([
   {
@@ -96,6 +97,14 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/preorders",
+        element: (
+          <PrivateRoutes>
+            <PreOrders></PreOrders>
+          </PrivateRoutes>
+        ),
       },
     ],
   },

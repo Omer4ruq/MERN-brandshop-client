@@ -5,6 +5,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider";
 import app from "../firebase/firebase.config";
+import Swal from "sweetalert2";
 
 const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
@@ -13,6 +14,13 @@ const handleGoogleSignIn = () => {
     .then((result) => {
       const user = result.user;
       console.log(user);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Google Logged in Succesfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     })
     .catch((error) => {
       console.log(error.message);
@@ -35,6 +43,13 @@ const SignIn = () => {
       .then((result) => {
         console.log(result);
         navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "User Loggedin Succesfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => {
         console.error("keya be" + error);

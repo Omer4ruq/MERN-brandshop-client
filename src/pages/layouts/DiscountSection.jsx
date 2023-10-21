@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const DiscountSection = () => {
   return (
@@ -15,9 +16,16 @@ const DiscountSection = () => {
               up to date on it all. make suer you sign up.
             </p>
             <div className="flex gap-2">
-              <button className="btn btn-neutral">Sign Up</button>
-              <button className="btn btn-neutral">Shop The Collection</button>
-              <button className="btn btn-neutral">Download Our Apps</button>
+              <NavLink to="/signup">
+                {" "}
+                <button className="btn btn-neutral w-32">Sign Up</button>
+              </NavLink>
+              <NavLink to="collection">
+                <button className="btn btn-neutral">Shop The Collection</button>
+              </NavLink>
+              <NavLink to="/app">
+                <button className="btn btn-neutral">Download Our Apps</button>
+              </NavLink>
             </div>
           </div>
         </div>

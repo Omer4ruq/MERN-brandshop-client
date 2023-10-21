@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 const ProductDetails = () => {
   const products = useLoaderData();
   const { brand, name, price, type, description, photo, rating } = products;
@@ -41,6 +42,14 @@ const ProductDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("br " + data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Adde in Cart Successfully",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        }
       });
   };
 
@@ -83,7 +92,6 @@ const ProductDetails = () => {
               >
                 Add Cart
               </button>
-              <button className="btn btn-neutral rounded-none">Update</button>
             </div>
           </div>
         </div>

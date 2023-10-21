@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./layouts/Banner";
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import BrandCard from "./layouts/BrandCard";
 import DiscountSection from "./layouts/DiscountSection";
 
@@ -34,7 +34,9 @@ const Home = () => {
         <h1 className="text-white font-medium text-2xl ml-16 mb-4">
           Up Coming Collections
         </h1>
-        <UpComingProducts></UpComingProducts>
+        <NavLink to={`/preorders`}>
+          <UpComingProducts></UpComingProducts>
+        </NavLink>
       </div>
     </div>
   );

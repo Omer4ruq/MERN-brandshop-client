@@ -1,11 +1,11 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 const AddProducts = () => {
   const handleAddProduct = (event) => {
     event.preventDefault();
     const form = event.target;
     const brand = form.brand.value;
-    const color = form.color.value;
     const name = form.name.value;
     const price = form.price.value;
     const type = form.type.value;
@@ -15,7 +15,6 @@ const AddProducts = () => {
     const newProducts = {
       brand,
       name,
-      color,
       price,
       type,
       description,
@@ -34,12 +33,20 @@ const AddProducts = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "User Added Successfully",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        }
       });
   };
 
   return (
     <div className="bg-cyan-500 ">
-      <h1>this is add product page</h1>
+      <h1 className="font-bold text-4xl text-center ">Add Products</h1>
       <form onSubmit={handleAddProduct}>
         <div className=" p-20 px-60 ml-40">
           <div className="flex gap-4">
@@ -71,6 +78,7 @@ const AddProducts = () => {
                   <option>Jacket</option>
                   <option>Shirt</option>
                   <option>Shorts</option>
+                  <option>Backpack</option>
                 </select>
               </div>
             </div>
