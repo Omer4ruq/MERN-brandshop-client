@@ -6,6 +6,7 @@ import DiscountSection from "./layouts/DiscountSection";
 
 import Brands from "./layouts/Brands";
 import UpComingProducts from "./UpComingProducts";
+import Partner from "./layouts/Partner";
 
 const Home = () => {
   const brands = useLoaderData();
@@ -37,6 +38,9 @@ const Home = () => {
         <NavLink to={`/preorders`}>
           <UpComingProducts></UpComingProducts>
         </NavLink>
+      </div>
+      <div className="mb-4">
+        <Partner></Partner>
       </div>
     </div>
   );

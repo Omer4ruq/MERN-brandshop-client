@@ -26,16 +26,13 @@ const UpdateProduct = () => {
     };
     console.log(updatedProduct);
 
-    fetch(
-      `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedProduct),
-      }
-    )
+    fetch(`https://fashion-server-sepia.vercel.app/products/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

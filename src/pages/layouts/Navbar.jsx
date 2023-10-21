@@ -10,14 +10,14 @@ const Navbar = () => {
   };
   return (
     <div className="flex  md:gap-10 ">
-      <div className=" w-[80px] md:w-[180px] object-cover ml-16 mt-2">
+      <div className=" w-[60px] md:w-[180px] object-cover ml-16 mt-2">
         <img src="https://i.ibb.co/THJMh1c/default-1.png" alt="" />
       </div>
-      <div className=" text-white flex  items-center gap-2 md:gap-5 text-[6px] md:text-[15px] font-semibold cursor-pointer ml-2 mb:ml-44 ">
+      <div className=" text-white flex  items-center gap-2 md:gap-5 text-[10px] md:text-[15px] font-semibold cursor-pointer ml-2 mb:ml-44 ">
         <NavLink className="hover:underline underline-offset-8" to="/">
           <div className="flex gap-2">
             <FaHome className="mt-1"></FaHome>
-            <h2>Home</h2>
+            <h2 className="hidden md:block">Home</h2>
           </div>
         </NavLink>
         <NavLink
@@ -26,19 +26,19 @@ const Navbar = () => {
         >
           <div className="flex gap-2">
             <FaPlus className="mt-1"></FaPlus>
-            <h2>Add Products</h2>
+            <h2 className="hidden md:block">Add Products</h2>
           </div>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/cart">
           <div className="flex gap-2">
             <FaShoppingCart className="mt-1"></FaShoppingCart>
-            <h2>My Cart</h2>
+            <h2 className="hidden md:block">My Cart</h2>
           </div>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/contactus">
           <div className="flex gap-2">
             <FaPhone className="mt-1"></FaPhone>
-            <h2>Contact</h2>
+            <h2 className="hidden md:block">Contact</h2>
           </div>
         </NavLink>
 
@@ -52,7 +52,7 @@ const Navbar = () => {
         {user ? (
           <div className="dropdown dropdown-end ">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-6 md:w-10  rounded-full">
                 <img src={user.photoURL} />
               </div>
             </label>

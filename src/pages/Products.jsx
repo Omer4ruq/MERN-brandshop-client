@@ -5,6 +5,7 @@ import { data } from "autoprefixer";
 import Slider from "./layouts/Slider";
 import Banner from "./layouts/Banner";
 import NikeSlider from "./layouts/NikeSlider";
+import ProductBanner from "./layouts/ProductBanner";
 
 const Products = () => {
   const products = useLoaderData();
@@ -13,13 +14,7 @@ const Products = () => {
 
   return (
     <div>
-      {/* slider */}
-      {/* <Banner products={products}></Banner> */}
-      {products.brand == "Nike" ? (
-        <NikeSlider></NikeSlider>
-      ) : products.brand == "Adidas" ? (
-        <Banner></Banner>
-      ) : null}
+      <ProductBanner></ProductBanner>
       {/* <div>
         {slides.map((slide) => (
           <Slider key={slide.brandId} slide={slide}></Slider>

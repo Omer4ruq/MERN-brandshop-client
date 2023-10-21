@@ -18,6 +18,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 
 import Brands from "./pages/layouts/Brands.jsx";
 import PreOrders from "./pages/PreOrders.jsx";
+import Collection from "./pages/Collection.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("db.json"),
+        loader: () => fetch("/db.json"),
       },
 
       {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products_by_brand/${params.brand}`
+            `https://fashion-server-sepia.vercel.app/products_by_brand/${params.brand}`
           ),
       },
 
@@ -59,10 +60,7 @@ const router = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoutes>
         ),
-        loader: () =>
-          fetch(
-            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/cart`
-          ),
+        loader: () => fetch(`https://fashion-server-sepia.vercel.app/cart`),
       },
       // {
       //   path: "/products/:brand",
@@ -72,7 +70,7 @@ const router = createBrowserRouter([
       //     </PrivateRoutes>
       //   ),
       //   loader: ({ params }) =>
-      //     fetch(`https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products_by_brand/${params.brand}`),
+      //     fetch(`https://fashion-server-sepia.vercel.app/products_by_brand/${params.brand}`),
       // },
       {
         path: "productdetails/:id",
@@ -83,7 +81,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products/${params.id}`
+            `https://fashion-server-sepia.vercel.app/products/${params.id}`
           ),
       },
 
@@ -96,7 +94,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products/${params.id}`
+            `https://fashion-server-sepia.vercel.app/products/${params.id}`
           ),
       },
       {
@@ -112,6 +110,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <PreOrders></PreOrders>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/collection",
+        element: (
+          <PrivateRoutes>
+            <Collection></Collection>
           </PrivateRoutes>
         ),
       },

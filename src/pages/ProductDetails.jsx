@@ -32,16 +32,13 @@ const ProductDetails = () => {
     };
     console.log(newProducts);
 
-    fetch(
-      "https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/cart",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newProducts),
-      }
-    )
+    fetch("https://fashion-server-sepia.vercel.app/cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProducts),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log("br " + data);
@@ -83,7 +80,10 @@ const ProductDetails = () => {
     <div>
       <div className="hero min-h-screen bg-yellow-300">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={photo} className="max-w-2xl rounded-lg shadow-2xl" />
+          <img
+            className=" w-xl md:max-w-2xl rounded-lg shadow-2xl"
+            src={photo}
+          />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-6">{description}</p>
