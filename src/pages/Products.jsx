@@ -20,7 +20,7 @@ const Products = () => {
           <Slider key={slide.brandId} slide={slide}></Slider>
         ))}
       </div> */}
-
+      <h2 className="ml-16 card-title text-white">Available Collections</h2>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
           {products.map((product) => (

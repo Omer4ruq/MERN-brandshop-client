@@ -18,8 +18,8 @@ const BrandCard = ({ brandName }) => {
               alt=""
             />
           </div>
-          <div>
-            <h2 className="text-orange-500 absolute -mt-6 px-[70px]">
+          <div className="hidden md:block">
+            <h2 className="text-yellow-300 absolute md:-mt-6 px-[30px] md:px-[70px]">
               {brand}
             </h2>
           </div>

@@ -60,6 +60,11 @@ const ProductCard = ({ product }) => {
 
             <div className="text-gray-400"> {rating}</div>
           </p>
+          <div>
+            <h2 className="card-title text-red-600">{brand}</h2>
+            <h2 className="card-title text-red-600">{type}</h2>
+          </div>
+
           <div className="card-actions justify-between">
             <div className="flex gap-2">
               <NavLink to={`/productdetails/${_id}`}>

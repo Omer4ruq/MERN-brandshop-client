@@ -47,7 +47,7 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      <div className=" md:pl-96 mt-2">
+      <div className=" md:pl-72 mt-2">
         {" "}
         {user ? (
           <div className="dropdown dropdown-end ">

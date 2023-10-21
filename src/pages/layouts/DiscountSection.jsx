@@ -5,8 +5,8 @@ const DiscountSection = () => {
   return (
     <div>
       <div className="hero w-full md:h-[410px] object-covern bg-yellow-300 mt-6">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
+        <div className="hero-content text-left md:text-center">
+          <div className=" max-w-md">
             <h1 className="text-5xl font-bold">
               WELCOME TO THE <br></br> CELEBRATION
             </h1>
