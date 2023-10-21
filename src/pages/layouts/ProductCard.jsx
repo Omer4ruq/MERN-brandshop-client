@@ -45,6 +45,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="ml-14 mb-6 ">
       <div></div>
+
       <div className=" w-72  glass">
         <figure>
           <img className="w-72 h-60" src={photo} />
