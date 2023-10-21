@@ -39,7 +39,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products_by_brand/${params.brand}`),
+          fetch(
+            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products_by_brand/${params.brand}`
+          ),
       },
 
       {
@@ -57,7 +59,10 @@ const router = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoutes>
         ),
-        loader: () => fetch(`http://localhost:5000/cart`),
+        loader: () =>
+          fetch(
+            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/cart`
+          ),
       },
       // {
       //   path: "/products/:brand",
@@ -67,7 +72,7 @@ const router = createBrowserRouter([
       //     </PrivateRoutes>
       //   ),
       //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/products_by_brand/${params.brand}`),
+      //     fetch(`https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products_by_brand/${params.brand}`),
       // },
       {
         path: "productdetails/:id",
@@ -77,7 +82,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products/${params.id}`
+          ),
       },
 
       {
@@ -88,7 +95,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(
+            `https://fashion-server-2l4qjc9mm-omers-projects-269a87b2.vercel.app/products/${params.id}`
+          ),
       },
       {
         path: "/signin",

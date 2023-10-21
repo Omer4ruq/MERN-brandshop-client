@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FaHome, FaPlus, FaShoppingCart, FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,19 +15,31 @@ const Navbar = () => {
       </div>
       <div className=" text-white flex  items-center gap-2 md:gap-5 text-[6px] md:text-[15px] font-semibold cursor-pointer ml-2 mb:ml-44 ">
         <NavLink className="hover:underline underline-offset-8" to="/">
-          <h2>Home</h2>
+          <div className="flex gap-2">
+            <FaHome className="mt-1"></FaHome>
+            <h2>Home</h2>
+          </div>
         </NavLink>
         <NavLink
           className="hover:underline underline-offset-8"
           to="/addproducts"
         >
-          <h2>Add Products</h2>
+          <div className="flex gap-2">
+            <FaPlus className="mt-1"></FaPlus>
+            <h2>Add Products</h2>
+          </div>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/cart">
-          <h2>My Cart</h2>
+          <div className="flex gap-2">
+            <FaShoppingCart className="mt-1"></FaShoppingCart>
+            <h2>My Cart</h2>
+          </div>
         </NavLink>
         <NavLink className="hover:underline underline-offset-8" to="/contactus">
-          <h2>Contact US</h2>
+          <div className="flex gap-2">
+            <FaPhone className="mt-1"></FaPhone>
+            <h2>Contact</h2>
+          </div>
         </NavLink>
 
         <NavLink className="hover:underline underline-offset-8" to="/signup">
