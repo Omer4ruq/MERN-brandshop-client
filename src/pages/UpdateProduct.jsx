@@ -54,8 +54,8 @@ const UpdateProduct = () => {
       <div className="bg-cyan-500 ">
         <h1 className="font-bold text-4xl text-center ">Update Products</h1>
         <form onSubmit={handleUpdate}>
-          <div className=" p-20 px-60 ml-40">
-            <div className="flex gap-4">
+          <div className=" p-20 px-10 md:px-60 md:ml-40">
+            <div className="md:flex gap-4">
               <div className="form-control">
                 <div className="input-group">
                   <select

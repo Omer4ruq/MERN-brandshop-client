@@ -48,8 +48,8 @@ const AddProducts = () => {
     <div className="bg-cyan-500 ">
       <h1 className="font-bold text-4xl text-center ">Add Products</h1>
       <form onSubmit={handleAddProduct}>
-        <div className=" p-20 px-60 ml-40">
-          <div className="flex gap-4">
+        <div className=" p-20 px-10 md:px-60  md:ml-40">
+          <div className="md:flex gap-4">
             <div className="form-control">
               <div className="input-group">
                 <select name="brand" className="select select-bordered">
@@ -130,7 +130,7 @@ const AddProducts = () => {
             </div> */}
           </div>
 
-          <div className=" gap-4">
+          <div className=" w-72 gap-4">
             <div className="form-control">
               <label className="label">
                 <span className="label-text"></span>
@@ -179,7 +179,7 @@ const AddProducts = () => {
               <label className="label">
                 <span className="label-text"></span>
               </label>
-              <label className="input-group w-96">
+              <label className="input-group w-72">
                 <span className="44">Price</span>
                 <input
                   type="text"
