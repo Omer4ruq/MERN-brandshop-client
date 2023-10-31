@@ -14,4 +14,4 @@ This is a brand shop website based on men fashion.. here are some key feature in
 
 here is the Live link of the project given below:
 
-- [My Website Here](https://fashion-client-project10.web.app/)
+- [My Website Here](https://65413001fb67212bb614d8b8--unrivaled-kitsune-8e04b7.netlify.app/)
